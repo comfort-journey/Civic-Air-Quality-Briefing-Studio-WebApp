@@ -1,0 +1,160 @@
+/* AeroCivic Studio Design System Stylesheet */
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.45);
+  }
+}
+
+.glow-active {
+  animation: pulseGlow 3s infinite ease-in-out;
+}
+
+/* Custom Scrollbar for Raw Logs & Trace tables */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Persona selection styling */
+.persona-btn.active {
+  border-color: rgba(16, 185, 129, 0.6) !important;
+  background-color: rgba(16, 185, 129, 0.12) !important;
+}
+
+/* Traceability highlight badges */
+.trace-cite {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  background-color: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #34d399;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0 2px;
+}
+
+.trace-cite:hover {
+  background-color: rgba(16, 185, 129, 0.3);
+}
+
+.data-gap-flag {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  background-color: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #f87171;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin: 0 2px;
+}
+
+/* Markdown styling inside output panels */
+.prose h1, .prose h2, .prose h3 {
+  color: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.prose h2 {
+  font-size: 1.25rem;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 0.35rem;
+}
+
+.prose h3 {
+  font-size: 1.05rem;
+  color: #34d399;
+}
+
+.prose p {
+  margin-bottom: 0.75rem;
+  line-height: 1.65;
+}
+
+.prose ul, .prose ol {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.prose li {
+  margin-bottom: 0.35rem;
+}
+
+.prose strong {
+  color: #f1f5f9;
+}
+
+/* Priority Action Cards */
+.action-card {
+  border-radius: 0.75rem;
+  padding: 0.85rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid;
+}
+
+.action-card.p0 {
+  background-color: rgba(239, 68, 68, 0.08);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.action-card.p1 {
+  background-color: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.action-card.p2 {
+  background-color: rgba(59, 130, 246, 0.08);
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Print Stylesheet for Civic Notice Board Posters */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  
+  header, #btnApiKeyModal, #btnRunTests, #btnNewBrief, 
+  #fileInput, #rawInputData, #personaSelector, 
+  #btnGenerateBrief, .no-print, #quickDataAuditStrip {
+    display: none !important;
+  }
+
+  #resultsStudioSection, #tabContentCitizen, #tabContentInternal {
+    display: block !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .prose h1, .prose h2, .prose h3, .prose p, .prose strong {
+    color: #000000 !important;
+  }
+}

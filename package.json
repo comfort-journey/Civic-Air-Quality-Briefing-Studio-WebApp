@@ -1,0 +1,19 @@
+{
+  "name": "aerocivic-studio",
+  "version": "1.0.0",
+  "description": "Civic Air Quality Briefing Studio for Google Developer PromptWars Hackathon",
+  "main": "app.js",
+  "scripts": {
+    "start": "npx serve .",
+    "test": "node tests.js"
+  },
+  "keywords": [
+    "google-gemini",
+    "promptwars",
+    "civic-intelligence",
+    "air-quality",
+    "genai"
+  ],
+  "author": "Google Developer PromptWars Team",
+  "license": "MIT"
+}
